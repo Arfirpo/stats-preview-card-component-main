@@ -22,7 +22,7 @@
 
 body {
   display: flex;
-  margin: 30% auto;
+  margin: 0 auto;
   justify-content: center;
   align-items: center;
   font-family: var(--ff1);
