@@ -1,0 +1,198 @@
+
+:root {
+    --VeryDarkblue: hsl(233, 47%, 7%);
+    --Darkdesaturatedblue: hsl(244, 38%, 16%);
+    --Softviolet: hsl(277, 64%, 61%);
+    --layer: rgba(129, 47, 179, 0.546);    
+    --White: hsl(0, 0%, 100%);
+    --Slightlytransparentwhite: hsla(0, 0%, 100%, 0.675);
+    --Slightlytransparentwhite-statheadings: hsla(0, 0%, 100%, 0.6);
+    --ff1: 'Inter', sans-serif;
+    --ff2: 'Lexend Deca', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+body {
+  display: flex;
+  margin: 30% auto;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--ff1);
+  font-size: 1rem;
+  width: 25rem;
+  height: 63.733333333333334rem;
+  background-color: var(--VeryDarkblue);
+}
+
+.main__card-container {
+    width: 88%;
+    height: 81.59%;
+    margin: 5.866666666666666rem auto 2rem;
+    background-color: var(--Darkdesaturatedblue);
+    border-radius: 0.5333333333333333rem;
+    overflow: hidden; 
+}
+
+.card__image {
+    background-image: url("./images/image-header-mobile.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 30.769231%; /* 240/780 */
+    border-top-left-radius: 0.625rem;
+    border-top-right-radius: 0.625rem;
+}
+
+#layer {
+    background: var(--layer);
+    height: 100%;
+    width: 100%;
+}
+
+.card__content {
+    width: 100%;
+    height: 69.230769%;
+    color: var(--White);
+    text-align: center;
+    padding: 2.8rem 2.1333333333333333rem 1.4666666666666666rem;
+}
+
+#insights {
+    color: var(--Softviolet);
+}
+
+.card__content-title {
+    font-size: 1.8666666666666667rem;
+    letter-spacing: -.06rem;
+    height: 7.666666666666667rem;
+    width: 17.4rem;
+    line-height: 2.2rem;
+    font-family: var(--ff1);
+}
+
+.card__content-paragraph {
+    font-family: var(--ff1);
+    font-size: 1rem;
+    height: 9.133333333333333rem;
+    line-height: 1.6rem;
+    color: var(--Slightlytransparentwhite);
+    margin-bottom: 0.26666666666666666rem;
+}
+
+.card__description-flex-container {
+    height: 14rem;
+}
+
+.card__flex {
+    line-height: 1.6666666666666667rem;
+    margin-bottom: 1.4666666666666666rem;
+}
+.card__flex-details {
+    font-size: 1.6666666666666667rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+
+}
+
+.card__flex-amount {
+    color: var(--Slightlytransparentwhite-statheadings);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.013rem;
+}
+
+.attribution {
+    font-size: 0.7333333333333333rem;
+    display: block;
+    text-align: center;
+    color: bisque;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media  (min-width: 800px){
+    body {  
+        margin: auto auto;      
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 96rem;
+        height: 53.333333333333336rem;
+    }
+
+    .main__card-container {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 77.083333%; /* 1110/1440 */
+        height: 56%; /* 448px/800 */
+        margin: auto auto;
+        text-align: left;
+        overflow: hidden;
+    }
+
+    .card__image {
+        background-image: url("./images/image-header-desktop.jpg");
+        background-size: cover;
+        height: 100%;
+        width: 48.648649%; /* 540/1110 */
+        border-top-right-radius: 0.625rem;
+        border-bottom-right-radius: 0.625rem;
+        border-top-left-radius: 0;
+    }
+
+    .card__content {
+        height: 100%;
+        width: 51.171171%; /* 568px/1110 */
+        padding: 4.666666666666667rem 4.8rem
+    }
+
+    .card__content-title {
+        font-size: 2.6666666666666665rem;
+        text-align: left;
+        letter-spacing: -.06rem;
+        height: 5.6rem;
+        width: 100%;
+        line-height: 3rem;
+        margin-bottom: 2rem;
+    }
+    
+    .card__content-paragraph {
+        font-family: var(--ff1);
+        text-align: left;
+        font-size: 1rem;
+        line-height: 1.6rem;
+        color: var(--Slightlytransparentwhite);
+        margin-bottom: 0.26666666666666666rem;
+        margin-right: 2rem;
+        letter-spacing: 0.0266666666666667rem;
+    }
+    
+    .card__description-flex-container {
+        display: flex;
+        flex-direction: row;
+        height: 100%;        
+    }
+
+    .card__flex {
+        margin-right:3rem;
+        padding-left: 0.8rem;
+        text-align: left;
+    }
+
+    .card__flex-amount {
+        letter-spacing: 0.1066666666666667rem;
+    }
+
+    .attribution {
+        font-size: 1.2rem;
+    } 
+}
